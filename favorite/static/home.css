@@ -1,0 +1,129 @@
+.body {
+    margin : 0;
+  }
+.container {
+    width : 100%;
+    height : 100%;
+    flex-direction : column;
+
+}
+
+.box_1{
+    justify-content : center;
+    align-items : center;
+    width : 100%;
+    height : 150px;
+    display : flex;
+    margin-bottom: 10px;
+    padding-bottom : -10px;
+
+}
+
+.title{
+    width : 100%;
+    height : 80%;
+    background-color :Moccasin;
+    font-size: 4em;
+    font-weight : bold;
+    padding-bottom : -10px;
+
+}
+
+
+.box_2 {
+    justify-content : center;
+    align-items: center;
+    width : 100%;
+    height : 900px;
+    flex-direction: column;
+    display : flex;
+    color : white;
+    font-weight : bold;
+    background-color : lightcoral;
+}
+
+.box_3 {
+    justify-content : center;
+    align-items: center;
+    width : 100%;
+    height : 900px;
+    flex-direction : row;
+    display : flex;
+    flex : 1;
+    background-color : DarkSalmon;
+
+}
+
+.channel {
+    display : flex;
+    width : 25%;
+    justify-content : center;
+    align-items : center;
+    font-size : 2em;
+    font-weight : bold;
+    font-style : italic;
+    background-color : Crimson;
+    margin-top : 10px;
+
+}
+
+.youtuber {
+    display:flex;
+    width : 20%;
+    justify-content : center;
+    align-items : center;
+    font-size : 1.5em;
+    font-style : italic;
+    font-weight : bold;
+}
+
+.preference {
+    display : flex;
+    width : 20%;
+    height : 50px;
+    justify-content : center;
+    align-items : center;
+    font-size : 1.2em;
+    font-weight : bold; 
+}
+
+
+
+.onlive{
+    display : flex;
+    width : 20%;
+    height : 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.onlive_on{
+    width : 40%;
+    height : 60px;
+    display : flex;
+    justify-content :center;
+    align-items : center;
+    color : black;
+    background-color : yellow;
+    border-radius : 40px;
+}
+
+.onlive_off {
+    width : 40%;
+    height : 60px;
+    display : flex;
+    justify-content :center;
+    align-items : center;
+    color : black;
+    background-color : lightslategray;
+    border-radius : 40px;
+    
+}
+
+.subscriber {
+    width : 25%;
+    font-size : 1.5em;
+    justify-content : center;
+    align-items : center;
+    display : flex;
+}

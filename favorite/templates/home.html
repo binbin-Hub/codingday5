@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/home.css">
+</head>
+<body>
+
+<div class = "container">
+   <div class = "box_1"> 
+    <div class="title">
+        <center>❣My Favorite Channel❣</center>
+        {% for channel in channels.all %}
+    </div>
+    </div>
+
+    <div class = "box_2">
+        <div class = "channel">
+            <p>Channel Name : {{channel.channelname}}</p>
+        </div>
+        <div class = "youtuber">
+            <p>Who is He/Her? : {{channel.creatorname}}</p>
+        </div>
+        <div class = "prefernce">
+        <p>
+            {% if channel.preference == 1 %}
+                <p>My preference : ★☆☆☆☆</p>
+                {% elif channel.preference == 2 %}
+                <p>My preference :★★☆☆☆</p>
+                {% elif channel.preference == 3 %}
+                <p>My preference : ★★★☆☆</p>
+                {% elif channel.preference == 4 %}
+                <p>My preference : ★★★★☆</p>
+            {% else %}
+            <p>my preference : ★★★★★</p>
+            {% endif %}
+        </p>
+        </div>
+        
+        <div class = "onlive" >
+            {% if channel.onlive == True %}
+            <p class = "onlive_on">ON LIVE!!</p>
+            {% else %}
+                <p class = "onlive_off">OFF LIVE!!</p>
+
+            {% endif %}
+        </p>
+        </div>
+    
+        <div class = "subscriber">
+        <p> Subscriber : {{channel.subscriber}} million </p>
+        </div>
+    
+        
+    <div class = "box_3">      
+        <p><iframe width="485" height="315" src="{{channel.link1}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+        <p><iframe width="485" height="315" src="{{channel.link2}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+        <p><iframe width="485" height="315" src="{{channel.link3}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+        </div>
+    </div>
+
+{% endfor %}
+</body>
+</html>
